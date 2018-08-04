@@ -10,11 +10,9 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">Welcome to React</h1>
         </header>
-        <p className="App-intro">
-          <input type="file"
-               id="avatar" name="avatar"
-               accept="image/png, image/jpeg" />
-        </p>
+        <input type="file" id="image" name="image" accept="image/png, image/jpeg" />
+        <input type="file" id="overlay" name="overlay" accept="image/png, image/jpeg" />
+        <input type="submit" />
       </div>
     );
   }
