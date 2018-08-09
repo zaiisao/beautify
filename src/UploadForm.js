@@ -15,14 +15,14 @@ class UploadForm extends React.Component {
 	}
 
 	handleSubmit(event) {
-		alert('A name was submitted: ' + this.state.value);
+		alert('A name was submitted: ' + this.uploadImage[0] + ", " + this.uploadOverlay[0]);
 	}
 
 	render() {
 		return (
 			<form ref={this.myRef} onSubmit={this.handleSubmit}>
-				<input type="file" id="image" name="image" accept="image/png, image/jpeg" />
-				<input type="file" id="overlay" name="overlay" accept="image/png, image/jpeg" />
+				<input type="file" accept="image/png, image/jpeg" ref={(ref) => { this.uploadImage   = ref; }} />
+				<input type="file" accept="image/png, image/jpeg" ref={(ref) => { this.uploadOverlay = ref; }} />
 				<input type="submit" value="Submit" />
 			</form>
 		);
